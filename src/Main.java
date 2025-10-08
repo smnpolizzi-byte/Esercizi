@@ -27,6 +27,7 @@ public class Main {
         System.out.println("\nprodotti per categoria telefonia: ");
         l.prodottiPerCategoria("telefonia").forEach(p -> System.out.print(p.getNome() + " "));
 
+
         System.out.println("\nprodotti per categoria cancelleria: ");
         l.prodottiPerCategoria("cancelleria").forEach(p -> System.out.print(p.getNome() + " "));
 
