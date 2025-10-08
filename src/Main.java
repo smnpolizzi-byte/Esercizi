@@ -83,14 +83,14 @@ public class Main {
 
         System.out.println();
 
-        System.out.print("\nlista di prodotti per la categoria gaming:\n\t");
+        System.out.print("\nlista di prodotti per la categoria frutteria:\n\t");
         listaProdotti.stream().filter(p -> p.get("categoria").equals("frutteria")).forEach(p -> {
             System.out.print(p.get("nome") + "\t");
         });
 
         System.out.println();
 
-        Map<String, String> mediaCategorie = new HashMap<>();
+        Map<String, Double> mediaCategorie = new HashMap<>();
 
         System.out.println("\nmedia prezzo per categoria:\n\t");
         listaProdotti.stream().forEach(p -> {
@@ -104,7 +104,7 @@ public class Main {
                     counter++;
                 }
             }
-            mediaCategorie.put(p.get("categoria"), String.valueOf((somma/counter)));
+            mediaCategorie.put(p.get("categoria"), somma/counter);
         });
 
         mediaCategorie.forEach((k,v) -> {
